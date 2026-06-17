@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>DudaPlus</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div id="app" class="market">
+    <div class="market-header">
+        <div class="market-title"><img src="img/dudaplus.png" alt="DudaPlus"></div>
+        <div class="market-timer" id="timer"></div>
+        <button id="closeBtn" class="close-btn">X</button>
+    </div>
+    <ul id="marketTabs" class="market-tabs">
+        <li data-tab="All" class="active">All</li>
+        <li data-tab="Common">Common</li>
+        <li data-tab="Uncommon">Uncommon</li>
+        <li data-tab="Rare">Rare</li>
+        <li data-tab="Epic">Epic</li>
+        <li data-tab="Legendary">Legendary</li>
+    </ul>
+    <div id="grid" class="market-grid"></div>
+</div>
+<div id="detailOverlay" class="detail-overlay"></div>
+
+<div id="detailCard" class="detail-card">
+    <div class="detail-header">
+        <div id="detailTitle" class="detail-title"></div>
+        <button id="detailClose" class="detail-close">✕</button>
+    </div>
+
+    <div class="detail-body">
+        <!-- LEFT: INFO -->
+        <div class="detail-info">
+            <div class="detail-price-block">
+                <div class="detail-price-label">Price</div>
+                <div id="detailPrice" class="detail-price"></div>
+            </div>
+
+            <div class="detail-specs">
+                <div class="detail-spec-row">
+                    <span class="detail-spec-label">Vehicle Type</span>
+                    <span id="detailClass" class="detail-spec-value"></span>
+                </div>
+                <div class="detail-spec-row">
+                    <span class="detail-spec-label">Color</span>
+                    <span id="detailColor" class="detail-spec-value"></span>
+                </div>
+                <!-- 🔹 NEW: Rarity -->
+                <div class="detail-spec-row" id="rowRarity" style="display:none;">
+                <span class="detail-spec-label">Rarity</span>
+                <span id="detailRarity" class="detail-spec-value"></span>
+                </div>
+
+                <!-- 🔹 NEW: Mileage -->
+                <div class="detail-spec-row" id="rowMileage" style="display:none;">
+                <span class="detail-spec-label">Mileage</span>
+                <span id="detailMileage" class="detail-spec-value"></span>
+                </div>
+
+                <!-- 🔹 NEW: Condition -->
+                <div class="detail-spec-row" id="rowCondition" style="display:none;">
+                <span class="detail-spec-label">Condition</span>
+                <span id="detailCondition" class="detail-spec-value"></span>
+                </div>
+
+                <!-- 🔹 NEW: Damages list -->
+                <div class="detail-spec-row detail-spec-row--list" id="rowDamages" style="display:none;">
+                <span class="detail-spec-label">Damages</span>
+                <span class="detail-spec-value">
+                    <ul id="detailDamages" class="detail-damages"></ul>
+                </span>
+                </div>
+                <!-- Summary -->
+                <div class="detail-spec-row" id="rowDamageSummary" style="display:none;">
+                    <span class="detail-spec-label">Damage Summary</span>
+                    <span id="detailDamageSummary" class="detail-spec-value"></span>
+                </div>
+                <!-- 🔹 NEW: Lokacija -->
+                <div class="detail-spec-row">
+                    <span class="detail-spec-label">Location</span>
+                    <span id="detailLocation" class="detail-spec-value"></span>
+                </div>
+            </div>
+
+            <button id="detailBuy" class="detail-buy">Buy this vehicle</button>
+        </div>
+
+        <!-- RIGHT: BIG PHOTO -->
+        <div class="detail-image">
+            <img id="detailImage" src="img/default.png" alt="">
+        </div>
+    </div>
+</div>
+<script src="script.js"></script>
+</body>
+</html>
