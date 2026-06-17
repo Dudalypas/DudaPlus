@@ -2,6 +2,8 @@
 
 DudaPlus is a FiveM vehicle marketplace resource built for QBCore. It generates rotating vehicle listings, shows them in a NUI storefront, and stores purchased vehicles with condition and rarity metadata.
 
+<img width="1377" height="345" alt="image" src="https://github.com/user-attachments/assets/d59a113a-ff90-4a66-b6eb-a246dcebb39a" />
+
 ## Features
 
 - Rotating market stock with refresh intervals defined in `config.lua`.
